@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mtb-hooks"
+readme = "README.md"
+version = "0.1.0"
+requires-python = ">=3.9"
+description = ""
+authors = [{ name = "Mel Massadian", email = "mel@melmassadian.com" }]
+
+[project.scripts]
+trailing-whitespace-fixer = "hooks.trailing_whitespace_fixer:main"
+bump-version = "hooks.bump_version:main"
+
+[tool.pyright]
+reportMissingTypeArgument = true
+strictListInference = true
+reportMissingTypeStubs = false
+typeCheckingMode = "basic"
+pythonVersion = "3.10"
+
+[tool.setuptools.packages.find]
+where = ["."]

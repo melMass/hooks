@@ -1,0 +1,15 @@
+- id: fix-trailing-whitespace
+  name: trim trailing whitespace
+  description: trims trailing whitespace.
+  entry: trailing-whitespace-fixer
+  language: python
+  types: [text]
+  stages: [commit, push, manual]
+
+- id: bump-version
+  name: bump-version
+  description: Use bump-my-version to version up
+  entry: bump-version
+  language: python
+  types: [text]
+  stages: [pre-push, manual]
